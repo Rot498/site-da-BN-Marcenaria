@@ -93,4 +93,44 @@ footer {
   gap: 20px; /* espaço entre os quadrantes */
 }
 
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #0C182F;
+}
+
+.auth-container input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #0C182F;
+  color: #B78A0A;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #1a2a4a;
+}
+
+
 
