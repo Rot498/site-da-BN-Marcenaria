@@ -93,7 +93,7 @@ footer {
   gap: 20px; /* espaço entre os quadrantes */
 }
 
-.auth-container {
+.container {
   max-width: 400px;
   margin: 100px auto;
   padding: 40px;
@@ -103,12 +103,12 @@ footer {
   text-align: center;
 }
 
-.auth-container h2 {
+.container h2 {
   margin-bottom: 20px;
   color: #0C182F;
 }
 
-.auth-container input {
+.container input {
   width: 100%;
   margin: 10px 0;
   padding: 12px;
