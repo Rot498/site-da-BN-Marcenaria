@@ -1,61 +1,168 @@
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: 'Roboto', Arial, sans-serif;
   background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #0C182F;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 header {
   background: #0C182F;
   color: #B78A0A;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #B78A0A;
 }
 
 header nav ul {
   list-style: none;
+  margin: 10px 0 0;
   padding: 0;
-  margin-top: 10px;
-}
-
-header nav ul li {
-  display: inline;
-  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 header nav ul li a {
   color: #B78A0A;
-  text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
 
 header nav ul li a:hover,
 header nav ul li a.ativo {
-  text-decoration: underline;
+  background: #B78A0A;
+  color: #0C182F;
 }
 
-main {
-  padding: 40px 20px;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: url("img/inicio.jpeg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   text-align: center;
 }
 
+.hero .btn-cta {
+  background: #B78A0A;
+  color: #0C182F;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hero .btn-cta:hover {
+  background: #fff;
+  color: #0C182F;
+  transform: scale(1.05);
+}
+
+.diferenciais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.diferenciais .item {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diferenciais .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.servicos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+}
+
 .galeria {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .galeria img {
-  width: 300px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
 }
 
 form {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +170,7 @@ form {
 form input, form textarea, form button {
   margin: 10px 0;
   padding: 12px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
@@ -74,63 +181,70 @@ form button {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
-  background: #0C182F;
+  background: #B78A0A;
+  color: #0C182F;
 }
 
 footer {
   background: #0C182F;
   color: #B78A0A;
-  padding: 15px;
+  padding: 30px 20px;
   text-align: center;
 }
 
-.servicos-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-  gap: 20px; /* espaço entre os quadrantes */
+footer .socials {
+  margin-top: 15px;
 }
 
-.container {
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 40px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-.container h2 {
-  margin-bottom: 20px;
-  color: #0C182F;
-}
-
-.container input {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.auth-container button {
-  width: 100%;
-  padding: 12px;
-  background: #0C182F;
+footer .socials a {
+  margin: 0 10px;
+  font-size: 1.4rem;
   color: #B78A0A;
-  border: none;
-  border-radius: 5px;
+}
+
+footer .socials a:hover {
+  color: #fff;
+}
+
+.whatsapp-button-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50px;
   font-weight: bold;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
-.auth-container button:hover {
-  background: #1a2a4a;
+.whatsapp-button-fixed:hover {
+  transform: scale(1.1);
+  background: #1ebe5c;
 }
 
+.whatsapp-button-fixed img {
+  width: 20px;
+  height: 20px;
+}
 
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
